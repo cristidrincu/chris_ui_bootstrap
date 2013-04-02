@@ -1,0 +1,34 @@
+body{
+	margin:0;
+	padding:0;
+	line-height:16px;
+}
+
+.mainContainer{
+	width: 100%;
+	height:100%;
+}
+
+h1,h2,h3,h4,h5,p,ul{
+	margin:0;
+	padding:0;
+}
+
+ul.mainMenu, ul.mainMenu li{
+	list-style: none;
+	display: inline-block;
+}
+
+ul.mainMenu li{
+	margin-left: 10px;
+}
+
+#logoContainer{
+	padding-top: 10px;
+}
+
+#mainMenuContainer{
+	padding-top:20px;
+}
+
+ul.mainMenu

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Splash Screen Allegiant ConfigHub</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <!--stylesheets declarations start here-->
+        <link rel='stylesheet' type='text/css' href="css/bootstrap.css"/>
+        <link rel='stylesheet' type='text/css' href="css/bootstrap-responsive.css"/>
+        <link rel="stylesheet" type="text/css" href="css/styles_custom.css"/>
+        
+        <!--javascript declarations start here-->
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src='js/bootstrap.js'></script>
+        <script src="js/tabs_navi.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id='logoAllegiant'>
+                <ul id="headerLogoText">
+                    <li><a href='#' target='_self'><img src="images/logo_allegiant.gif"/></a></li>
+                    <li><h3>Application Variable Management ALPHA</h3></li>
+                </ul>
+            </div>
+        </header>
+        <div class="row-fluid snapshotContainer">
+            <div class="span12">
+                <ul class="nav nav-tabs" id="tabsNavi">
+                    <li class="active">
+                        <a href="#generalOverview" data-toggle="tab">General Overview</a>
+                    </li>
+                    <li><a href="#applications" data-toggle="tab">Applications</a></li>
+                    <li><a href="#sections" data-toggle="tab">Sections</a></li>
+                    <li><a href="#environments" data-toggle="tab">Environments</a></li>
+                    <li><a href="#variables" data-toggle="tab">Variables</a></li>
+                    <li><a href="#generalOperations" data-toggle="tab">General Operations</a></li>
+                </ul>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="generalOverview">
+                        <!--navbar or something similar-->
+                        <div class="span7">
+                            <div class="alert alert-info infoBarLeftColumn">REPORT GENERATED BASED ON THE LATEST VARIABLES ADDED/MODIFIED</div>
+                            <table class="table table-hover" id="tableGeneralOverview">
+                            <thead>
+                                <tr class="tableSections">
+                                    <th>Section</th>
+                                    <th>Application</th>
+                                    <th>Environment</th>
+                                    <th>Variable</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tr class="activeTableRow">
+                                <td>Section 1</td>
+                                <td>Application Name</td>
+                                <td>DEVELOPMENT</td>
+                                <td>VARIABLE NAME</td>
+                                <td>13-05-2012</td>
+                            </tr>
+                            <tr>
+                                <td>Section 1</td>
+                                <td>Application Name</td>
+                                <td>DEVELOPMENT</td>
+                                <td>VARIABLE NAME</td>
+                                <td>13-05-2012</td>
+                            </tr>
+                            <tr>
+                                <td>Section 1</td>
+                                <td>Application Name</td>
+                                <td>DEVELOPMENT</td>
+                                <td>VARIABLE NAME</td>
+                                <td>13-05-2012</td>
+                            </tr>
+                            <tr>
+                                <td>Section 1</td>
+                                <td>Application Name</td>
+                                <td>DEVELOPMENT</td>
+                                <td>VARIABLE NAME</td>
+                                <td>13-05-2012</td>
+                            </tr>
+                            <tr>
+                                <td>Section 1</td>
+                                <td>Application Name</td>
+                                <td>DEVELOPMENT</td>
+                                <td>VARIABLE NAME</td>
+                                <td>13-05-2012</td>
+                            </tr>
+                            <tr>
+                                <td>Section 1</td>
+                                <td>Application Name</td>
+                                <td>DEVELOPMENT</td>
+                                <td>VARIABLE NAME</td>
+                                <td>13-05-2012</td>
+                            </tr>
+                            <tr>
+                                <td>Section 1</td>
+                                <td>Application Name</td>
+                                <td>DEVELOPMENT</td>
+                                <td>VARIABLE NAME</td>
+                                <td>13-05-2012</td>
+                            </tr>
+                            <tr>
+                                <td>Section 1</td>
+                                <td>Application Name</td>
+                                <td>DEVELOPMENT</td>
+                                <td>VARIABLE NAME</td>
+                                <td>13-05-2012</td>
+                            </tr>
+                            <tr>
+                                <td>Section 1</td>
+                                <td>Application Name</td>
+                                <td>DEVELOPMENT</td>
+                                <td>VARIABLE NAME</td>
+                                <td>13-05-2012</td>
+                            </tr>
+                            <tr>
+                                <td>Section 1</td>
+                                <td>Application Name</td>
+                                <td>DEVELOPMENT</td>
+                                <td>VARIABLE NAME</td>
+                                <td>13-05-2012</td>
+                            </tr>
+                            
+                            
+                        </table>
+                        <div class="alert alert-info infoBarLeftColumn">REPORT GENERATED BASED ON THE LATEST VARIABLES ADDED/MODIFIED</div>
+                        </div><!--ends table general overview span7-->
+                        <div class="span5">
+                            <div class="variableDetailsContainer">
+                                <div class="alert alert-info infoBarRightColumn">VARIABLE REPORT</div>
+                                <div class="alert alert-info containerVariableInfo">
+                                    <ul>
+                                        <li><h4 class="variableTypeTitle">VARIABLE TYPE - JSON</h4></li>
+                                    </ul> 
+                                </div><!--ends containerVariableInfo-->
+                                <div class="alert containerVariableInfo">
+                                    <ul>
+                                        <li><h4 class="variableValueTitle">VARIABLE VALUE</h4></li>
+                                    <li>
+                                        <p>
+                                            {"stream_count":13356,
+
+                                            "name":"live_user_starladder1",
+
+                                            "embed_count":3500,
+
+                                            "channel_count":30796,
+
+                                            "format":"live",
+
+                                            "category":"gaming",
+
+                                            "title":"SLTV Star Series Day 24 - Na`Vi -vs- eL'Pride LIVE"}
+                                        </p>
+                                    </li>
+                                    </ul>
+                                </div><!--ends containerVariableInfo-->
+                                <div class="alert alert-success containerVariableInfo">
+                                    <ul>
+                                        <li>
+                                        <h4 class="variableHistoryTitle">VARIABLE HISTORY</h4>
+                                        <ul class="variableHistoryListDetails">
+                                            <li>Modified by: </li>
+                                            <li>Action code: </li>
+                                            <li>Var Value ID: </li>
+                                            <li>Old Var ID: </li>
+                                            <li>Old Env ID: </li>
+                                            <li>Old Value:  </li>
+                                            <li>New Var ID: </li>
+                                        </ul>
+                                    </li>
+                                    </ul>
+                                </div><!--ends containerVariableInfo-->
+                                <div class="containerVariableInfo">
+                                    <ul>
+                                    <li>
+                                        <h4>VARIABLE OPTIONS</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac quam tortor. Curabitur velit lorem, hendrerit sit amet consectetur ac, blandit vel massa.</p>
+                                        <a href="#modalEditVariable" role="button" class="btn btn-primary variableOptions" data-toggle="modal">Edit Variable</a>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac quam tortor. Curabitur velit lorem, hendrerit sit amet consectetur ac, blandit vel massa.</p>
+                                        <button class="btn btn-primary variableOptions">Delete Variable</button>
+                                    </li>
+                                </ul>
+                                </div><!--ends containerVariableInfo-->
+                                
+                            </div><!--ends variableDetailsContainer-->
+                        </div><!--ends span5 variable details-->
+                        
+                    </div>
+                    <div class="tab-pane" id="applications">Applications</div>
+                    <div class="tab-pane" id="sections">Sections</div>
+                    <div class="tab-pane" id="environments">Environments</div>
+                    <div class="tab-pane" id="variables">
+                        
+                            <div class="span7">
+                            <div class="alert alert-info infoBarLeftColumn">LATEST VARIABLES ADDED</div>
+                            <div class="filterVariablesForm">
+                                    <form class="form-inline filterVariableForm">
+                                        <i class="icon-question-sign"></i>
+                                        <label>Variable type: </label>    
+                                        <select class="selectFilterVars">
+                                            <option>JSON</option>
+                                            <option>XML</option>
+                                            <option>String</option>
+                                        </select>
+                                        <label>Section: </label>
+                                        <select class="selectFilterSections">
+                                            <option>Section 1</option>
+                                            <option>Section 2</option>
+                                            <option>Section 3</option>
+                                            <option>Section 4</option>
+                                        </select>
+                                        <button class="btn btn-primary filterBtn">Filter variables</button>
+                                    </form>
+                                </div>
+                            <div class="containerListLatestVariables"><!--span5-->
+                                <table class="table tableLatestVariables">
+                                    <tr>
+                                        <td>
+                                            <ul class="alert containerVariableDetails">
+                                                <li>Variable name: VARIABLE 1</li>
+                                                <li>Type: JSON</li>
+                                                <li>Published on: 12/10/2012</li>
+                                                <li><button class="btn btn-success variableDetailsBtn">VIEW DETAILS</button></li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul class="alert containerVariableDetails">
+                                                    <li>Variable name: VARIABLE 1</li>
+                                                    <li>Type: JSON</li>
+                                                    <li>Published on: 12/10/2012</li>
+                                                    <li><button class="btn btn-success variableDetailsBtn">VIEW DETAILS</button></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul class="alert containerVariableDetails">
+                                                <li>Variable name: VARIABLE 1</li>
+                                                <li>Type: JSON</li>
+                                                <li>Published on: 12/10/2012</li>
+                                                <li><button class="btn btn-success variableDetailsBtn">VIEW DETAILS</button></li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul class="alert containerVariableDetails">
+                                                <li>Variable name: VARIABLE 1</li>
+                                                <li>Type: JSON</li>
+                                                <li>Published on: 12/10/2012</li>
+                                                <li><button class="btn btn-success variableDetailsBtn">VIEW DETAILS</button></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <ul class="alert containerVariableDetails">
+                                                <li>Variable name: VARIABLE 1</li>
+                                                <li>Type: JSON</li>
+                                                <li>Published on: 12/10/2012</li>
+                                                <li><button class="btn btn-success variableDetailsBtn">VIEW DETAILS</button></li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul class="alert containerVariableDetails">
+                                                <li>Variable name: VARIABLE 1</li>
+                                                <li>Type: JSON</li>
+                                                <li>Published on: 12/10/2012</li>
+                                                <li><button class="btn btn-success variableDetailsBtn">VIEW DETAILS</button></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="filterVariablesForm">
+                                    <form class="form-inline filterVariableForm">
+                                        <i class="icon-question-sign"></i>
+                                        <label>Variable type: </label>    
+                                        <select class="selectFilterVars">
+                                            <option>JSON</option>
+                                            <option>XML</option>
+                                            <option>String</option>
+                                        </select>
+                                        <label>Section: </label>
+                                        <select class="selectFilterSections">
+                                            <option>Section 1</option>
+                                            <option>Section 2</option>
+                                            <option>Section 3</option>
+                                            <option>Section 4</option>
+                                        </select>
+                                        <button class="btn btn-primary filterBtn">Filter variables</button>
+                                    </form>
+                                </div>
+                            </div><!--ends containerListLatestVariables-->
+                            
+                        </div><!--ends span7 latest variables added-->
+                        <div class="span5">
+                            <div class="alert alert-info infoBarRightColumn">VARIABLE DETAILS</div>
+                            <div class="alert alert-info variableHistoryContainer">
+                                <ul>
+                                    <li>Variable name: var 1</li>
+                                    <li>Variable type: JSON</li>
+                                    <li>Variable published on: 20/01/2013</li>
+                                    <li>
+                                        Variable value: {"stream_count":13356,
+
+                                        "name":"live_user_starladder1",
+
+                                        "embed_count":3500,
+
+                                        "channel_count":30796,
+
+                                        }
+                                    </li>
+                                    <li><h5 class="variableEnvSecDetails splitter">ENVIRONMENT: </h5></li>
+                                    <li><h5 class="variableEnvSecDetails">SECTION: </h5></li>
+                                    <li><h5 class="variableEnvSecDetails">SECTION APP: </h5></li>
+                                </ul>
+                                <ul class="editIndividualVariableOpts">
+                                    <li><button type="button" data-toggle="modal" data-target="#modalEditVariable" class="btn btn-primary">EDIT VARIABLE</button></li>
+                                    <li><button class="btn btn-danger">DELETE VARIABLE</button></li>
+                                </ul>
+                            </div><!--ends detailed report for a variable-->
+                        </div><!--ends span5 variable details-->
+                    </div><!--ends variables tab-->
+                    <div class="tab-pane" id="generalOperations">
+                        
+                        <div class="tabbable tabs-left">
+                            <ul class="nav nav-tabs" id="tabsGeneralOps">
+                                <li class="active">
+                                    <a href="#appGeneralOps" data-toggle="tab">Applications</a>
+                                </li>
+                                <li>
+                                    <a href="#sectionsGeneralOps" data-toggle="tab">Sections</a>
+                                </li>
+                                <li>
+                                    <a href="#envGeneralOps" data-toggle="tab">Environments</a>
+                                </li>
+                                <li>
+                                    <a href="#varGeneralOps" data-toggle="tab">Variables</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="appGeneralOps">Applications General Operations</div>
+                                <div class="tab-pane" id="sectionsGeneralOps">Sections General Operations</div>
+                                <div class="tab-pane" id="envGeneralOps">Environments General Operations</div>
+                                <div class="tab-pane" id="varGeneralOps">Variables General Operations</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div id="push"></div>
+                
+        </div>
+        <div id="footer">
+            <div class="container">
+                <p>Copyright 2013 Allegiant Air</p>
+            </div>
+        </div><!--ends footer div-->
+        
+        <!--modal window for editing a variable-->
+        <!-- Modal -->
+            <div id="modalEditVariable" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modalEditVariable" aria-hidden="true">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">Edit Variable</h3>
+              </div>
+              <div class="modal-body">
+                <p>Form elements to be implemented below</p>
+              </div>
+              <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+    </body>
+</html>

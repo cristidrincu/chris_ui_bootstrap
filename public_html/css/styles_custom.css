@@ -1,0 +1,223 @@
+root { 
+    display: block;
+}
+
+html,body{
+    height:100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h4, p{
+    color:#6E6E6E;
+    font-weight:normal;
+}
+
+button{
+    margin-bottom:10px;
+}
+
+ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.clearFloats{
+    clear:both;
+}
+
+div.snapshotContainer{
+    min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+        margin-top:80px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+        text-align:center;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+          
+        }
+      }
+      
+      div#footer p{
+          padding-top:25px;
+      }
+
+
+div#logoAllegiant{
+    margin-bottom:15px;
+}
+
+div.containerVariableInfo, div.variableHistoryContainer{
+    margin-bottom:10px;
+    margin-right:10px;
+    /*border-top:1px solid #D8D8D8;*/
+}
+
+ul#headerLogoText, ul#headerLogoText li{
+    display:inline-block;
+}
+
+ul#headerLogoText li{
+    /*margin-left:10px;*/
+}
+
+ul#headerLogoText li h3{
+    position:relative;
+    top:19px;
+}
+
+ul#tabsNavi{
+    /*margin-left:25px;*/
+}
+
+table#tableGeneralOverview{
+  margin-left:10px;  
+}
+
+table#tableGeneralOverview tr.tableSections{
+    /*background-color:#FFFF00;*/
+    background-color:#fff;
+}
+
+table#tableGeneralOverview tr.activeTableRow{
+    background-color: #fff;
+    cursor:pointer;
+}
+
+table#tableGeneralOverview tr{
+    background-color:#CEECF5;
+    cursor:pointer;
+}
+
+div.variableDetailsContainer{
+   /*margin-right:10px;*/ 
+}
+
+div.variableDetailsContainer p{
+    font-weight:bold;
+    position:relative;
+    top:5px;
+}
+
+div.variableDetailsContainer ul li p{
+    padding-bottom:15px;
+}
+
+h4.variableTypeTitle{
+    padding-top:15px;
+    padding-bottom:15px;
+}
+
+h4.variableHistoryTitle{
+    
+}
+
+ul.variableHistoryListDetails{
+    padding-bottom:10px;
+}
+
+ul.variableHistoryListDetails li{
+    padding-top:3px;
+}
+
+button.variableOptions{
+    margin-bottom:10px;
+}
+
+
+/*VARIABLES TAB STYLES*/
+ul.listLatestVariables, ul.listLatestVariables li, ul.editIndividualVariableOpts, ul.editIndividualVariableOpts li{
+    display:inline-block;
+}
+
+ul.editIndividualVariableOpts{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/*li.containerVariableDetails{
+    margin-bottom:10px;
+    margin-left: 0;
+}*/
+
+/*li.containerVariableDetails ul li{
+    display:block;
+    margin-bottom:5px;
+}*/
+
+ul.containerVariableDetails{
+    display:block;
+    margin-bottom:5px;
+}
+
+button.variableDetailsBtn{
+    margin-top:10px;
+}
+
+h5.variableEnvSecDetails{
+    margin-top:3px;
+}
+
+.splitter{
+    padding-top:20px;
+}
+
+/*table.tableLatestVariables tr td{
+    width:300px;
+}*/
+
+div.filterVariablesForm{
+  
+}
+
+form.filterVariableForm{
+    /*padding:5px 5px;*/
+    margin-left:15px;
+}
+
+select.selectFilterVars, select.selectFilterSections{
+    width:200px;
+}
+
+form.filterVariableForm label{
+    margin-left:10px;
+    margin-right:10px;
+}
+
+form.filterVariableForm button.filterBtn{
+    margin-left:5px;
+}
+
+div.infoBarLeftColumn{
+    margin-left:10px;
+}
+
+div.infoBarRightColumn{
+    margin-right:10px;
+}
+
+
+/*GENERAL OPERATIONS STYLES*/
+ul#tabsGeneralOps{
+    margin-left:10px;
+}
+
