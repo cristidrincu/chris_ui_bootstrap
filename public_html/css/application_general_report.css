@@ -1,0 +1,17 @@
+div.summaryDetails{
+    margin-bottom:0;
+    padding-bottom:10px;
+}
+
+div.summaryDetails ul li{
+    margin-bottom: 5px;
+}
+
+div.rightColumnAppsDetails button{
+    margin-bottom: 20px;
+}
+
+table.sectionVariableOptions tr td{
+    background-color: #d9edf7;
+}
+

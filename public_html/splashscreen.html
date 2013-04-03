@@ -9,6 +9,7 @@
         <link rel='stylesheet' type='text/css' href="css/bootstrap-responsive.css"/>
         <link rel="stylesheet" type="text/css" href="css/styles_custom.css"/>
         <link rel="stylesheet" type="text/css" href="css/modal_styles.css"/>
+        <link rel="stylesheet" type="text/css" href="css/application_general_report.css"/>
         
         <!--javascript declarations start here-->
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -26,6 +27,18 @@
         </header>
         <div class="row-fluid snapshotContainer">
             <div class="span12">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                      <a class="brand" href="#">Config Hub Menu</a>
+                      <ul class="nav" id="mainMenuNav">
+                        <li class="active"><a href="#">General Overview</a></li>
+                        <li><a href="#">Section Management</a></li>
+                        <li><a href="#">Apps Management</a></li>
+                        <li><a href="#">Environment Management</a></li>
+                        <li><a href="#">Variable Management</a></li>
+                      </ul>
+                    </div>
+                  </div>
                 <ul class="nav nav-tabs" id="tabsNavi">
                     <li class="active">
                         <a href="#generalOverview" data-toggle="tab">General Overview</a>
@@ -34,10 +47,12 @@
                     <li><a href="#sections" data-toggle="tab">Sections</a></li>
                     <li><a href="#environments" data-toggle="tab">Environments</a></li>
                     <li><a href="#variables" data-toggle="tab">Variables</a></li>
-                    <li><a href="#generalOperations" data-toggle="tab">General Operations</a></li>
+                    <li><a href="#generalOperations" data-toggle="tab">Operations</a></li>
                 </ul>
                 
                 <div class="tab-content">
+                    <!----------------------------------------------->
+                    <!--START OF GENERAL OVERVIEW SECTION------------>
                     <div class="tab-pane active" id="generalOverview">
                         <!--navbar or something similar-->
                         <div class="span7">
@@ -187,10 +202,221 @@
                                 
                             </div><!--ends variableDetailsContainer-->
                         </div><!--ends span5 variable details-->
-                        
                     </div>
-                    <div class="tab-pane" id="applications">Applications</div>
-                    <div class="tab-pane" id="sections">Sections</div>
+                    <!--END OF GENERAL OVERVIEW SECTION---------------------->
+                    
+                    <!--------------------------------------------------------->
+                    <!--START OF APPLICATIONS TAB AND CONTENT-->
+                    <div class="tab-pane" id="applications">
+                        <div class="tabbable tabs-left">
+                            <ul class="nav nav-tabs" id="tabsGeneralOps">
+                                <li class="active">
+                                    <a href="#app1Details" data-toggle="tab">APPLICATION 1 NAME</a>
+                                </li>
+                                <li>
+                                    <a href="#app2Details" data-toggle="tab">APPLICATION 2 NAME</a>
+                                </li>
+                                <li>
+                                    <a href="#app3Details" data-toggle="tab">APPLICATION 3 NAME</a>
+                                </li>
+                                <li>
+                                    <a href="#app4Details" data-toggle="tab">APPLICATION 4 NAME</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="app1Details">
+                                    <div class="span7 leftColumnAppsDetails">
+                                        <ul>
+                                            <li><p>Modified by: SYSTEM</p></li>
+                                            <li><h4>APPLICATION ACTIVE IN SECTION(S): </h4></li>
+                                        </ul>
+                                        <table class="table">
+                                            <tr>
+                                                <td>
+                                                    <div class="alert alert-success summaryDetails">
+                                                        <ul>
+                                                            <li>Section Name: NAME OF THE SECTION IN QUESTION</li>
+                                                            <li>Section Modified By: Q&amp;A</li>
+                                                        </ul>
+                                                        <button class="btn btn-success">View Section</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="alert alert-success summaryDetails">
+                                                        <ul>
+                                                            <li>Section Name: NAME OF THE SECTION IN QUESTION</li>
+                                                            <li>Section Modified By: SYSTEM</li>
+                                                        </ul>
+                                                        <button class="btn btn-success">View Section</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="alert alert-success summaryDetails">
+                                                        <ul>
+                                                            <li>Section Name: NAME OF THE SECTION IN QUESTION</li>
+                                                            <li>Section Modified By: DEV</li>
+                                                        </ul>
+                                                        <button class="btn btn-success">View Section</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="alert alert-success summaryDetails">
+                                                        <ul>
+                                                            <li>Section Name: NAME OF THE SECTION IN QUESTION</li>
+                                                            <li>Section Modified By: SYSTEM</li>
+                                                        </ul>
+                                                        <button class="btn btn-success">View Section</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div><!--ends leftColumnAppsDetails-->
+                                    <div class="span5 rightColumnAppsDetails">
+                                        <h4>EDIT APPLICATION</h4>
+                                        <ul>
+                                            <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu ornare  neque. Etiam nec sollicitudin leo. Fusce nibh metus, adipiscing sit amet viverra placerat, euismod id felis.</p></li>
+                                        </ul>
+                                        <button class="btn btn-primary">Edit Application</button>
+                                        
+                                        <ul>
+                                            <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu ornare  neque. Etiam nec sollicitudin leo. Fusce nibh metus, adipiscing sit amet viverra placerat, euismod id felis.</p></li>
+                                        </ul>
+                                        <button class="btn btn-primary">Delete Application</button>
+                                    </div><!--ends rightColumnAppsDetails-->
+                                    <br class="clearFloats"/>
+                                </div>
+                                <div class="tab-pane" id="app2Details">APPLICATION 2 DETAILS</div>
+                                <div class="tab-pane" id="app3Details">APPLICATION 3 DETAILS</div>
+                                <div class="tab-pane" id="app4Details">APPLICATION 4 DETAILS</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END OF APPLICATIONS TAB AND CONTENT-->
+                    <!--------------------------------------------------------->
+                    
+                    <!--START OF SECTIONS TAB AND CONTENT---------------------->
+                    <div class="tab-pane" id="sections">
+                        <div class="tabbable tabs-left">
+                            <ul class="nav nav-tabs" id="tabsGeneralOps">
+                                <li class="active">
+                                    <a href="#section1Details" data-toggle="tab">Section1 name</a>
+                                </li>
+                                <li>
+                                    <a href="#section2Details" data-toggle="tab">Section2 name</a>
+                                </li>
+                                <li>
+                                    <a href="#section3Details" data-toggle="tab">Section3 name</a>
+                                </li>
+                                <li>
+                                    <a href="#section4Details" data-toggle="tab">Section4 name</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="section1Details">
+                                    <div class="span7">
+                                        <ul>
+                                            <li><p>Modified by: SYSTEM</p></li>
+                                            <li><h4>APPLICATIONS&amp;VARIABLES BELONGING TO THIS SECTION</h4></li>
+                                        </ul>
+                                        <table class="table">
+                                           <tr>
+                                                <td>
+                                                    <div class="alert alert-info summaryDetails">
+                                                        <ul>
+                                                            <li>Application name: AIRPLANE MAINTENANCE</li>
+                                                            <li>Application modified by: SYSTEM</li>
+                                                            <li>Variable(s):</li>
+                                                        </ul>
+                                                        <table class="table sectionVariableOptions">
+                                                            <tr>
+                                                                <td>Variable Name</td>
+                                                                <td>
+                                                                    <button class="btn btn-primary">VIEW</button>
+                                                                    <button class="btn btn-primary" data-toggle="modal" data-target="#modalEditVariable">EDIT</button>
+                                                                    <button class="btn btn-primary">DELETE</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Variable Name</td>
+                                                                <td>
+                                                                    <button class="btn btn-primary">VIEW</button>
+                                                                    <button class="btn btn-primary">EDIT</button>
+                                                                    <button class="btn btn-primary">DELETE</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Variable Name</td>
+                                                                <td>
+                                                                    <button class="btn btn-primary">VIEW</button>
+                                                                    <button class="btn btn-primary">EDIT</button>
+                                                                    <button class="btn btn-primary">DELETE</button>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <button class="btn btn-success">View Section</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="alert alert-info summaryDetails">
+                                                        <ul>
+                                                            <li>Application name: AIRPLANE MAINTENANCE</li>
+                                                            <li>Application modified by: SYSTEM</li>
+                                                            <li>Variable(s):</li>
+                                                        </ul>
+                                                        <table class="table sectionVariableOptions">
+                                                            <tr>
+                                                                <td>Variable Name</td>
+                                                                <td>
+                                                                    <button class="btn btn-primary">VIEW</button>
+                                                                    <button class="btn btn-primary">EDIT</button>
+                                                                    <button class="btn btn-primary">DELETE</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Variable Name</td>
+                                                                <td>
+                                                                    <button class="btn btn-primary">VIEW</button>
+                                                                    <button class="btn btn-primary">EDIT</button>
+                                                                    <button class="btn btn-primary">DELETE</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Variable Name</td>
+                                                                <td>
+                                                                    <button class="btn btn-primary">VIEW</button>
+                                                                    <button class="btn btn-primary">EDIT</button>
+                                                                    <button class="btn btn-primary">DELETE</button>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <button class="btn btn-success">View Section</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="span5">
+                                        <h4>EDIT SECTION</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu ornare  neque. Etiam nec sollicitudin leo. Fusce nibh metus, adipiscing sit amet viverra placerat, euismod id felis.</p>
+                                        <button class="btn btn-primary">Edit Section</button>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="section2Details">Section2 Details</div>
+                                <div class="tab-pane" id="section3Details">Section3 Details</div>
+                                <div class="tab-pane" id="section4Details">Section4 Details</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--END OF SECTIONS TAB AND CONTENT------------------------->
+                    
                     <div class="tab-pane" id="environments">Environments</div>
                     <div class="tab-pane" id="variables">
                         
