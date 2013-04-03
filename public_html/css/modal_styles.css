@@ -1,0 +1,30 @@
+div#modalEditVariable{
+    width:980px;
+    margin-left:-460px;
+}
+
+div.leftColumnEditFormContainer, div.rightColumnEditFormContainer{
+    float:left;
+    margin-left:10px;
+}
+
+div.rightColumnEditFormContainer ul:first-child{
+    margin-top:30px;
+}
+
+div.leftColumnEditFormContainer{
+    margin-bottom: 15px;
+}
+
+div.leftColumnEditFormContainer{
+    width: 600px;
+}
+
+div.rightColumnEditFormContainer{
+    width:300px;
+}
+
+div.editModal{
+    margin-bottom:15px;
+}
+

@@ -8,6 +8,7 @@
         <link rel='stylesheet' type='text/css' href="css/bootstrap.css"/>
         <link rel='stylesheet' type='text/css' href="css/bootstrap-responsive.css"/>
         <link rel="stylesheet" type="text/css" href="css/styles_custom.css"/>
+        <link rel="stylesheet" type="text/css" href="css/modal_styles.css"/>
         
         <!--javascript declarations start here-->
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -179,7 +180,7 @@
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac quam tortor. Curabitur velit lorem, hendrerit sit amet consectetur ac, blandit vel massa.</p>
                                         <a href="#modalEditVariable" role="button" class="btn btn-primary variableOptions" data-toggle="modal">Edit Variable</a>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac quam tortor. Curabitur velit lorem, hendrerit sit amet consectetur ac, blandit vel massa.</p>
-                                        <button class="btn btn-primary variableOptions">Delete Variable</button>
+                                        <button class="btn btn-danger variableOptions">Delete Variable</button>
                                     </li>
                                 </ul>
                                 </div><!--ends containerVariableInfo-->
@@ -359,14 +360,102 @@
         </div><!--ends footer div-->
         
         <!--modal window for editing a variable-->
-        <!-- Modal -->
+        <!-- Modal VARIABLE-->
             <div id="modalEditVariable" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modalEditVariable" aria-hidden="true">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="myModalLabel">Edit Variable</h3>
+                <h3 id="myModalLabel">Edit Variable(Variable Name)</h3>
               </div>
-              <div class="modal-body">
-                <p>Form elements to be implemented below</p>
+              <div class="modal-body editModal">
+                  <div class="leftColumnEditFormContainer">
+                      <form class="form-horizontal">
+                          <div class="control-group">
+                              <p>Modified by: SYSTEM</p>
+                          </div>
+                          <div class="control-group">
+                            <label class="control-label" for="inputName">Name</label>
+                            <div class="controls">
+                              <input type="text" id="inputName" placeholder="Name">
+                            </div>
+                          </div>
+                          <div class="control-group">
+                            <label class="control-label" for="selectSection">Belongs to section:</label>
+                            <div class="controls">
+                                <select id="selectSection">
+                                    <option>Section1</option>
+                                    <option>Section2</option>
+                                    <option>Section3</option>
+                                    <option>Section4</option>
+                                </select>
+                            </div>
+                          </div>
+                          <div class="control-group">
+                              <label class="control-label" for="selectAppSection">App belongs to section:</label>  
+                            <div class="controls">
+                                <select id="selectAppSection">
+                                    <option>Section1</option>
+                                    <option>Section2</option>
+                                    <option>Section3</option>
+                                    <option>Section4</option>
+                                </select>
+                            </div>
+                          </div>
+                          <div class="control-group">
+                              <label class="control-label" for="selectVariableType">Variable type: </label>
+                              <div class="controls">
+                                  <select id="selectVariableType">
+                                      <option>JSON</option>
+                                      <option>XML</option>
+                                      <option>String</option>
+                                      <option>Boolean</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="control-group">
+                              <label class="control-label" for="selectEnvType">Belongs to environment:</label>
+                              <div class="controls">
+                                  <select id="selectEnvType">
+                                      <option>DEV</option>
+                                      <option>Q&amp;A</option>
+                                      <option>RESEARCH</option>
+                                      <option>MAINTENANCE</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="control-group">
+                              <label class="control-label" for="variableValue">Variable Value: </label>
+                              <div class="controls">
+                                  <textarea rows="5"></textarea>
+                              </div>
+                          </div>
+                      </form>
+                  </div><!--ends leftColumnEditFormContainer-->
+                  <div class="rightColumnEditFormContainer">
+                      <div class="control-group">
+                          <p>VARIABLE VALUE HISTORY</p>
+                      </div>
+                      <div class="control-group">
+                          <ul>
+                              <li>Action code:</li>
+                              <li>Old var ID:</li>
+                              <li>Old env ID:</li>
+                              <li>Old EFF Date-Time:</li>
+                              <li>Old value:</li>
+                              <li>Old PUB Date_Time:</li>
+                          </ul>
+                      </div>
+                      <hr/>
+                      <div class="control-group">
+                          <ul>
+                              <li>New var ID:</li>
+                              <li>New env ID:</li>
+                              <li>New EFF Date_time:</li>
+                              <li>New value:</li>
+                              <li>New_Pub_Date_time: </li>
+                          </ul>
+                      </div>
+                  </div><!--ends rightColumnEditFormContainer-->
+                  <br class="clearFloats"/>
               </div>
               <div class="modal-footer">
                 <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
