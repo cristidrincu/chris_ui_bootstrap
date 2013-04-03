@@ -7,7 +7,7 @@ div.summaryDetails ul li{
     margin-bottom: 5px;
 }
 
-div.rightColumnAppsDetails button{
+div.rightColumnAppsDetails button, div.rightColumnEnvironment button{
     margin-bottom: 20px;
 }
 
