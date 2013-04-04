@@ -1,0 +1,335 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <!--BOOTSTRAP stylesheets declarations start here-->
+        <link rel='stylesheet' type='text/css' href="css/bootstrap.css"/>
+        <link rel='stylesheet' type='text/css' href="css/bootstrap-responsive.css"/>
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+        
+        <!--ALLEGIANT stylesheet declarations start here-->
+        <link id="base-style" href="css/style.css" rel="stylesheet">
+        <link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
+        <link id="validation" href="css/validationEngine.jquery.css" rel="stylesheet">
+        <link href="css/megamenu.css" rel="stylesheet">
+        
+        <!--CUSTOM CSS declarations start here-->
+        <link rel="stylesheet" type="text/css" href="css/styles_custom.css"/>
+        <link rel="stylesheet" type="text/css" href="css/modal_styles.css"/>
+        <link rel="stylesheet" type="text/css" href="css/application_general_report.css"/>
+        
+        <!--JAVASCRIPT declarations start here-->
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src='js/bootstrap.js'></script>
+        <script src="js/tabs_navi.js"></script>
+        
+        <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    </head>
+    <body>
+    <div class="box span6">
+    <a name="generate-purchase"></a>
+    <div data-original-title="" class="box-header">
+        <h2>
+            <i class="icon-money"></i>
+            <span class="break"></span>Generate Purchase Order Report
+        </h2>
+        <div class="box-icon">
+            <a class="btn-setting" href="#">
+                <i class="icon-wrench"></i>
+            </a>
+            <a class="btn-minimize" href="#">
+                <i class="icon-chevron-up"></i>
+            </a>
+            <a class="btn-close" href="#">
+                <i class="icon-remove"></i>
+            </a>
+        </div>
+    </div>
+    <div class="box-content">
+        <form method="post" class="formular form-horizontal form-validate" id="generatePurchase">
+            <fieldset>
+                <legend class="legend-header">
+						Enter parameters below.
+					</legend>
+                <p class="instructions">Items marked with an 
+                    <span style="color:red;font-weight:bold;font-size:16px;margin:0 5px;">*</span> are required.
+                </p>
+                <div class="control-group">
+                    <label class="control-label" for="vendor-from-date">Vendor Id Range</label>
+                    <div class="controls">
+                        <input name="beginVendorId" maxlength="6" value="" onchange="vendorIdChange('beginVendorId', this.value);" id="beginVendorId" class="stdtext input-mini" type="text">
+						To 
+							
+                            <input name="endVendorId" maxlength="6" value="" onchange="vendorIdChange('endVendorId', this.value);" id="endVendorId" class="stdtext input-mini" type="text">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label required">Order Category
+                                <span class="asterisk">*</span>
+                            </label>
+                            <div class="controls">
+                                <select name="orderCategory" id="orderCategory" class="validate[required] stdtext input-medium-large">
+                                    <option value=""></option>
+                                    <option value="GP">General purchases</option>
+                                    <option value="HO">Hotel PO'S</option>
+                                    <option value="IC">Inter-company vouchers</option>
+                                    <option value="IP">Inventory purchases</option>
+                                    <option value="MC">Manual checks</option>
+                                    <option value="MX">Maintenance</option>
+                                    <option value="OS">Office supplies</option>
+                                    <option value="RO">Repair orders</option>
+                                    <option value="VP">Vouchers payable</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">Order Status</label>
+                            <div class="controls">
+                                <select name="postatus" id="postatus" class="stdtext input-medium-large">
+                                    <option value=""></option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Open">Open</option>
+                                    <option value="Invoiced">Invoiced</option>
+                                    <option value="Paid">Paid</option>
+                                    <option value="Canceled">Canceled</option>
+                                    <option value="Partial">Partial</option>
+                                    <option value="Received">Received</option>
+                                    <option value="Closed">Closed</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label">G/L Account Range</label>
+                            <div class="controls">
+                                <input name="beginGlAccount" maxlength="6" value="" id="beginGlAccount" class="stdtext input-mini" type="text">
+		                    To 
+		                    
+                                    <input name="endGlAccount" maxlength="6" value="" id="endGlAccount" class="stdtext input-mini" type="text">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Dollar Amount Limit</label>
+                                    <div class="controls">
+                                        <div class="input-prepend">
+                                            <span class="add-on">$</span>
+                                            <input name="dollarAmountLimit" maxlength="18" value="" id="dollarAmountLimit" class="stdtextRight" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label required">Date Type
+                                            <span class="asterisk">*</span>
+                                        </label>
+                                        <div class="controls">
+                                            <div class="dateTypeformError parentFormgeneratePurchase formError" style="opacity: 0.87; position: absolute; top: 934px; left: 390px; margin-top: -40px;">
+                                                <div class="formErrorContent">* This field is required
+                                                    <br>
+                                                    </div>
+                                                    <div class="formErrorArrow">
+                                                        <div class="line10">
+                                                            <!-- -->
+                                                        </div>
+                                                        <div class="line9">
+                                                            <!-- -->
+                                                        </div>
+                                                        <div class="line8">
+                                                            <!-- -->
+                                                        </div>
+                                                        <div class="line7">
+                                                            <!-- -->
+                                                        </div>
+                                                        <div class="line6">
+                                                            <!-- -->
+                                                        </div>
+                                                        <div class="line5">
+                                                            <!-- -->
+                                                        </div>
+                                                        <div class="line4">
+                                                            <!-- -->
+                                                        </div>
+                                                        <div class="line3">
+                                                            <!-- -->
+                                                        </div>
+                                                        <div class="line2">
+                                                            <!-- -->
+                                                        </div>
+                                                        <div class="line1">
+                                                            <!-- -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <select name="dateType" id="dateType" class="validate[required] stdtext input-medium-large">
+                                                    <option value=""></option>
+                                                    <option value="ACCOUNTING_DATE">Accounting Date</option>
+                                                    <option value="SYSTEM_DATE">System Date</option>
+                                                    <option value="TRANSACTION_DATE">Transaction Date</option>
+                                                    <option value="DUE_DATE">Due Date</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label required">Date Range - From:
+                                                <span class="asterisk">*</span>
+                                            </label>
+                                            <div class="controls">
+                                                <div class="input-prepend">
+                                                    <span class="add-on">
+                                                        <i class="icon-calendar"></i>
+                                                    </span>
+                                                    <input class="validate[required] text-input datepicker hasDatepicker" id="gpdateFrom" name="gpdateFrom" value="" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="control-group">
+                                                <label class="control-label required">Date Range - To:
+                                                    <span class="asterisk">*</span>
+                                                </label>
+                                                <div class="controls">
+                                                    <div class="input-prepend">
+                                                        <span class="add-on">
+                                                            <i class="icon-calendar"></i>
+                                                        </span>
+                                                        <input class="validate[required] text-input datepicker hasDatepicker" id="gpdateTo" name="gpdateTo" value="" type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="control-group">
+                                                    <label class="control-label">Cutoff Due Date</label>
+                                                    <div class="controls">
+                                                        <div class="input-prepend">
+                                                            <span class="add-on">
+                                                                <i class="icon-calendar"></i>
+                                                            </span>
+                                                            <input class="validate[required] text-input datepicker hasDatepicker" id="gpdueDate" name="gpdueDate" value="" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label">Days Past Due Date</label>
+                                                        <div class="controls">
+                                                            <input name="daysPastDue" maxlength="10" value="" id="daysPastDue" class="stdtext input-mini" type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label required">Report Format
+                                                                <span class="asterisk">*</span>
+                                                            </label>
+                                                            <div class="controls">
+                                                                <select name="reportFormat" id="reportFormat" class="validate[required] stdtext input-medium-large">
+                                                                    <option value="ORDERS">Orders</option>
+                                                                    <option value="VENDOR/ORDERS">Vendor/Orders</option>
+                                                                    <option value="LOCATION/ACCOUNT/ORDERS">Location/Account/Orders</option>
+                                                                    <option value="DUE DATE/ORDERS">Due Date/Orders</option>
+                                                                    <option value="ORDER CATEGORY/ORDER DISTRIBUTION/ORDERS">Order Category/Order Distribution/Orders</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">Show Order Detail</label>
+                                                            <div class="controls">
+                                                                <div class="controls">
+                                                                    <label class="radio inline">
+                                                                        <div id="uniform-optionsRadios1" class="radio">
+                                                                            <span class="checked">
+                                                                                <div class="radio" id="uniform-showOrderDetail1">
+                                                                                    <span class="checked">
+                                                                                        <input style="opacity: 0;" name="showOrderDetail" id="showOrderDetail1" value="option1" checked="" type="radio">
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </span>
+                                                                            </div>
+									Yes		  
+								
+                                                                        </label>
+                                                                        <label class="radio inline">
+                                                                            <div id="uniform-optionsRadios2" class="radio">
+                                                                                <span>
+                                                                                    <div class="radio" id="uniform-showOrderDetail2">
+                                                                                        <span>
+                                                                                            <input style="opacity: 0;" name="showOrderDetail" id="showOrderDetail2" value="option2" type="radio">
+                                                                                            </span>
+                                                                                        </div>
+                                                                                    </span>
+                                                                                </div>
+									No
+								
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <label class="control-label">Invoice Comparison</label>
+                                                                    <div class="controls">
+                                                                        <label class="radio inline">
+                                                                            <div id="uniform-optionsRadios1" class="radio">
+                                                                                <span class="checked">
+                                                                                    <div class="radio" id="uniform-invoiceComparison1">
+                                                                                        <span class="checked">
+                                                                                            <input style="opacity: 0;" name="invoiceComparison" id="invoiceComparison1" value="option1" checked="" type="radio">
+                                                                                            </span>
+                                                                                        </div>
+                                                                                    </span>
+                                                                                </div>
+								Yes		  
+							
+                                                                            </label>
+                                                                            <label class="radio inline">
+                                                                                <div id="uniform-optionsRadios2" class="radio">
+                                                                                    <span>
+                                                                                        <div class="radio" id="uniform-invoiceComparison2">
+                                                                                            <span>
+                                                                                                <input style="opacity: 0;" name="invoiceComparison" id="invoiceComparison2" value="option2" type="radio">
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </span>
+                                                                                    </div>
+								No
+							
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="control-group">
+                                                                            <label class="control-label">User ID</label>
+                                                                            <div class="controls">
+                                                                                <input name="chgUserId" maxlength="10" value="" class="stdtext input-mini" type="text">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="control-group">
+                                                                                <label class="control-label">Other Options</label>
+                                                                                <div class="controls">
+                                                                                    <div class="checker" id="uniform-undefined">
+                                                                                        <span>
+                                                                                            <input name="transmitType" value="on" type="checkbox" style="opacity: 0;">
+                                                                                            </span>
+                                                                                        </div>Include Transmit Type
+                                                                                        <br>
+                                                                                            <div class="checker" id="uniform-undefined">
+                                                                                                <span>
+                                                                                                    <input name="untransmittedChanges" value="on" type="checkbox" style="opacity: 0;">
+                                                                                                    </span>
+                                                                                                </div>Show Only PO's with Untransmitted Changes
+		                
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="form-actions">
+                                                                                            <button class="btn btn-success" type="submit">Build report</button>
+                                                                                        </div>
+                                                                                    </fieldset>
+                                                                                </form>
+                                                                            </div>
+                                                                            <!-- END .box-content -->
+                                                                        </div>
+                                                                        <!-- END Purchase Order Report - span6 -->
+                                                                        
+                                                                            
+    </body>
+</html>
